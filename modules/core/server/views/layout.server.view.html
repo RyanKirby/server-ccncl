@@ -36,11 +36,48 @@
 </head>
 
 <body class="ng-cloak">
-  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <section class="content">
-    <section class="container">
+  <header ng-include="'/modules/core/client/views/header.client.view.html'"></header>
+  <section class="">
+    <section class="">
       {% block content %}{% endblock %}
     </section>
+
+
+
+    <!--ToDo implement foot properly-->
+
+    <!--Footer-->
+    <div>
+
+      <div id="footer" class="text-center">
+        <div class="container">
+        <ul class="list-inline banner-social-buttons">
+          <li>
+            <a href="https://www.facebook.com/cornerstonechurchNCL?fref=ts"><i class="fa fa-4x fa-facebook-square fa-fw"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/CornerstoneNCL"><i class="fa fa-4x fa-twitter-square fa-fw"></i></a>
+          </li>
+
+        </ul>
+        <p>E: info@ccncl.co.uk, T: 07983 289 009</p>
+        <p>A: 1st Floor, Bamburgh House, Market Street, NE16BH</p>
+
+        <p><small>Copyright &copy; CornerstonChurchNewcastle2015</small></p>
+        <!--              <a href="/#!/signin">Sign in</a>
+                    <a href="/auth/signout">Signout</a>-->
+
+        <p><small><i>This site is under development</i></small></p>
+        <p><small><i>Full site coming soon</i></small></p>
+      </div>
+      </div>
+    </footer>
+
+    <!--/ Footer-->
+
+
+
+
   </section>
 
   <!--Embedding The User Object-->

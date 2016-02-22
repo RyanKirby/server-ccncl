@@ -1,0 +1,176 @@
+.fullSlider {
+
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+
+}
+
+$text-margin: 20vh;
+
+.sliderTextIn {
+  position: absolute;
+  z-index: 1;
+  height: 50vh;
+  margin-top: $text-margin;
+  opacity: 1;
+
+  -webkit-animation: in 1s;
+  -moz-animation: in 1s;
+  animation: in 1s;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes in {
+  0% {
+    opacity: 0;
+    margin-top: $text-margin/2;
+  }
+  100% {
+    opacity: 1;
+    margin-top: $text-margin;
+  }
+}
+
+@-moz-keyframes in {
+  0% {
+    opacity: 0;
+    margin-top: $text-margin/2;
+  }
+  100% {
+    opacity: 1;
+    margin-top: $text-margin;
+  }
+}
+
+@keyframes in {
+  0% {
+    opacity: 0;
+    margin-top: $text-margin/2;
+  }
+  100% {
+    opacity: 1;
+    margin-top: $text-margin;
+  }
+}
+
+.fullsliderPicIn {
+  position: relative;
+  left: 0;
+  -webkit-animation: picIn 1s;
+  -moz-animation: picIn 1s;
+  animation: picIn 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes picIn {
+  0% {
+    left: -100%
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@-moz-keyframes picIn {
+  0% {
+    left: -100%
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes picIn {
+  0% {
+    left: -100%
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.fullSliderPicOut {
+  position: relative;
+  left: 100%;
+  -webkit-animation: picOut 1s;
+  -moz-animation: picOut 1s;
+  animation: picOut 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes picOut {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@-moz-keyframes picOut {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes picOut {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.sliderTextOut {
+  position: absolute;
+  z-index: 1;
+  height: 50vh;
+  margin-top: $text-margin*2;
+  opacity: 0;
+
+  -webkit-animation: textOut 1s;
+  -moz-animation: textOut 1s;
+  animation: textOut 1s;
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes textOut {
+  0% {
+    opacity: 1;
+    margin-top: $text-margin;
+  }
+  100% {
+    opacity: 0;
+    margin-top: $text-margin*2;
+  }
+}
+
+@-moz-keyframes textOut {
+  0% {
+    opacity: 1;
+    margin-top: $text-margin;
+  }
+  100% {
+    opacity: 0;
+    margin-top: $text-margin*2;
+  }
+}
+
+@keyframes textOut {
+  0% {
+    opacity: 1;
+    margin-top: $text-margin;
+  }
+  100% {
+    opacity: 0;
+    margin-top: $text-margin*2;
+  }
+}
+

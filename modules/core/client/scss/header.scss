@@ -1,0 +1,68 @@
+$logo-width-top: 200px;
+$logo-height-top: 90px;
+$logo-width-top-small: 40px;
+$logo-height-top-small: 40px;
+
+$nav-primary-col: #ffffff;
+$nav-height: 60px;
+$nav-font-size: 15px;
+
+.test {
+  border: 1px solid black;
+}
+
+.logo {
+  position: absolute;
+  width: $logo-width-top;
+  height: $logo-height-top;
+  margin-top: ($nav-height - $logo-height-top-small)/ 2;
+  background: url("/modules/core/client/img/brand/logo-full.png") no-repeat center;
+  background-size: $logo-width-top $logo-height-top;
+
+  -webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+}
+
+.navbar {
+  background: $nav-primary-col;
+  height: $nav-height;
+
+}
+
+.navbar ul{
+
+  padding-top: 5px;
+  font-size: $nav-font-size;
+}
+
+.navbar .dropdown{
+  padding: 10px;
+}
+
+.not-top.logo {
+  width: $logo-width-top-small;
+  height: $logo-height-top-small;
+  left: 20px;
+  background: url("/modules/core/client/img/brand/logo-small.png") no-repeat center;
+  background-size: $logo-width-top-small $logo-height-top-small;
+
+  -webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+}
+
+
+//Mobile/small screen
+@media screen and (max-width: 768px) {
+  .logo {
+    width: $logo-width-top-small;
+    height: $logo-height-top-small;
+    left: 20px;
+    background: url("/modules/core/client/img/brand/logo-small.png") no-repeat center;
+    background-size: $logo-width-top-small $logo-height-top-small;
+
+    -webkit-transition: 0.5s; /* Safari */
+    transition: 0.5s;
+  }
+}
+
+
