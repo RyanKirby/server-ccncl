@@ -36,7 +36,7 @@ angular.module('core').controller('GcController', ['$scope', 'Authentication',
                     }
                 },
                 thumbnail:'heaton.jpg',
-                details:'kashdkjshdk ajhdakjshd kjashd kajshdk asdkh asd ka sdhaskjdh haksjdha kjsdh akjdh haksjd aksjdh akshd hh kasjdh aksjhd '
+                details:'Eric and Claire lead the direction of the collective gospel communities, training leaders and helping those currently serving develop in their call to lead a community. In addition, Eric and Claire lead the Heaton Gospel community group. It’s a wonderful and fun-loving community, who are serious about the scriptures and making Jesus known. Heaton Gospel Community is currently brimming with people and will be looking to grow into 2 Gospel Communities in the near future.'
             },
             {
                 name:'Gateshead',
