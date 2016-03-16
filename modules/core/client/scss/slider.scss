@@ -1,3 +1,40 @@
+
+$slider-btn-trans:0.5s;
+
+.slider-btn{
+  position: absolute;
+  top:0;
+  border:none;
+  background: none;
+  width:80px;
+  height:100vh;
+  outline:0;
+  z-index: 1;
+
+  -webkit-transition: $slider-btn-trans; /* Safari */
+  transition: $slider-btn-trans;
+}
+
+.slider-next{
+  right:0;
+}
+
+.slider-btn:hover{
+  background: #595959;
+  opacity: 0.5;
+
+  -webkit-transition: $slider-btn-trans; /* Safari */
+  transition: $slider-btn-trans;
+}
+
+.slider-btn:hover .slider-icon{
+  color: white;
+
+  -webkit-transition: $slider-btn-trans; /* Safari */
+  transition: $slider-btn-trans;
+}
+
+
 .fullSlider {
 
   overflow: hidden;

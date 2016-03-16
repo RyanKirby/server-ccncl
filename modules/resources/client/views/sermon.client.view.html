@@ -1,0 +1,123 @@
+<section ng-controller="SermonController">
+
+  <div class="imagetop"></div>
+
+  <section class="text-center">
+    <h1>{{sermon.title}}</h1>
+  </section>
+
+
+  <div class="container sermon-main" ng-init="findOne()">
+    <div class="row">
+
+      <!--Sidebar-->
+      <div class="col-sm-3 hidden-sm hidden-xs">
+        <h4>Verses</h4>
+        <div class="alert alert-info" role="alert">Verses filter coming soon...</div>
+        <!--<div class="form-group">-->
+        <!--<input type="text" class="form-control input-sm" placeholder="Search Versus"-->
+        <!--ng-model="$parent.searchText" ui-clear>-->
+        <!--</div>-->
+        <!--<ul class="nav nav-pills nav-stacked gallery-filter-items">-->
+          <!--<li ng-class="{'active': $parent.searchText == ''}">-->
+            <!--<a href="" ng-click="filterSearch('')">-->
+              <!--All-->
+              <!--<span class="badge pull-right">{{(sermonseries| filter:'').length}}</span>-->
+            <!--</a>-->
+          <!--</li>-->
+          <!--<li ng-repeat="item in filterSections"-->
+              <!--ng-class="{'active': item == $parent.searchText}">-->
+            <!--<a href="" ng-click="filterSearch(item)">-->
+              <!--<span class="hidden-sm">{{item.b}} </span>{{item.v}}-->
+              <!--<span class="badge pull-right">{{(sermonseries| filter:item).length}}</span>-->
+            <!--</a>-->
+          <!--</li>-->
+        <!--</ul>-->
+      </div>
+
+      <!--Main Section-->
+      <div class="col-md-9 col-sm-12">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-7">
+                <h2>Description</h2>
+                <p>{{sermon.detail}}</p>
+              </div>
+
+              <div class="col-md-5 col-sm-6 col-xs-12">
+                <h2>Preachers</h2>
+                <span ng-repeat="preacher in sermon.preachers">
+                  <span class="sermon-{{preacher.id}}"
+                        ng-if="$index+1 < sermon.preachers.length-1">{{preacher.name}}, </span>
+                  <span class="sermon-{{preacher.id}}"
+                        ng-if="$index+1 == sermon.preachers.length-1 && $index+1 < sermon.preachers.length">{{preacher.name}} </span>
+                  <span class="sermon-{{preacher.id}}" ng-if="$index+1 == sermon.preachers.length"> and {{preacher.name}}.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-4 col-xs-12 sermon-tile sermon-tile-{{sermon.preacher.id}}"
+               ng-repeat="sermon in sermon.sermons| filter:searchText">
+            <a href="" class="sermon-title" ng-click="selectSermon(sermon)" data-toggle="modal" data-target="#myModal">
+              <h4><span class="glyphicon glyphicon-play sermon-{{sermon.preacher.id}}" aria-hidden="true"></span>
+                {{sermon.title}}</h4>
+            </a>
+            <div style="padding-left: 5px;">
+              <p>
+                <span>p.{{$index+1}} by <span
+                  class="sermon-{{sermon.preacher.id}}">{{sermon.preacher.name}}</span></span>
+              </p>
+              <p>
+                <small>Verses: {{sermon.verses}}</small>
+              </p>
+              <p>{{sermon.description}}</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-info" role="alert">Sermons are in the process of being uploaded. Please check back in a day or two...</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{selectedSermon.title}}</h4>
+        </div>
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3">
+              <img src="/modules/resources/client/img/{{sermon.thumbnail}}" alt="gc pic"
+                   style="width:100%;border-radius: 50px;">
+            </div>
+            <div class="col-xs-9">
+              <h3>Sermon Details</h3>
+              <p>Preacher: {{selectedSermon.preacher.name}}</p>
+              <p>Description: {{selectedSermon.description}}</p>
+            </div>
+          </div>
+        </div>
+        <audio style="width:100%" src="{{selectedSermon.media | trustUrl}}" audioplayer controls></audio>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="break"></div>
+
+
+</section>

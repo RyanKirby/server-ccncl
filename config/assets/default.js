@@ -5,7 +5,8 @@ module.exports = {
         lib: {
             css: [
                 'public/lib/bootstrap/dist/css/bootstrap.css',
-                'public/lib/bootstrap/dist/css/bootstrap-theme.css'
+                'public/lib/bootstrap/dist/css/bootstrap-theme.css',
+                'public/lib/font-awesome/css/font-awesome.min.css'
             ],
             js: [
                 'public/lib/angular/angular.js',
@@ -16,7 +17,13 @@ module.exports = {
                 'public/lib/angular-ui-utils/ui-utils.js',
                 'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
                 'public/lib/angular-file-upload/angular-file-upload.js',
+                'public/lib/angular-sanitize/angular-sanitize.min.js',
+                //'node_modules/lodash/chain/lodash.js',
                 'public/lib/jquery/dist/jquery.min.js',
+                'public/lib/jquery/dist/jquery.min.js',
+                'public/lib/lodash/lodash.js',
+                'public/lib/angular-google-maps/dist/angular-google-maps.js',
+                'public/lib/angular-googleapi/src/angular-google-maps.js',
                 'public/lib/bootstrap/dist/js/bootstrap.min.js',
                 'public/lib/owasp-password-strength-test/owasp-password-strength-test.js'
             ],

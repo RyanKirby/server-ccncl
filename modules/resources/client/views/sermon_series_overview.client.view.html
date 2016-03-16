@@ -1,0 +1,56 @@
+<section ng-controller="ResourcesController" ng-init="init()">
+
+  <div class="imagetop"></div>
+
+  <section class="text-center">
+        <h1>Resources <a ng-if="authentication.user.firstName" href="/sermonseries/edit"><span class="fa fa-pencil-square-o"></span></a></h1>
+  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 hidden-xs">
+
+        <h4>Books</h4>
+        <!--<div class="form-group">-->
+          <!--<input type="text" class="form-control input-sm" placeholder="Search Book"-->
+                 <!--ng-model="$parent.searchText" ui-clear>-->
+        <!--</div>-->
+        <ul class="nav nav-pills nav-stacked gallery-filter-items">
+          <li ng-class="{'active': $parent.searchText == ''}">
+            <a href="" ng-click="filterSearch('')">
+              All
+              <span class="badge pull-right">{{(sermonseries| filter:'').length}}</span>
+            </a>
+          </li>
+          <li ng-repeat="item in filterSections"
+              ng-class="{'active': item == $parent.searchText}">
+            <a href="" ng-click="filterSearch(item)">
+              {{item}}
+              <span class="badge pull-right">{{(sermonseries| filter:item).length}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-9">
+        <div class="alert alert-info" role="alert">Sermons are in the process of being upload. Check back in a day or two!</div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 hover-click" ng-repeat="series in sermonseries| filter:searchText">
+            <a class="fade-hover" href="/sermonseries/{{series._id}}" ng-click="updateSeries(series)">
+              <img-resp imageclass="'fade-hover'" imageurl="'/modules/resources/client/img/' + series.thumbnail"></img-resp>
+            </a>
+            <a href="/sermonseries/{{series._id}}" ng-click="updateSereis(series)">{{series.title}}</a> <br>
+            <small class="text-muted" ng-repeat="book in series.book">
+              {{book}}
+            </small>
+            <p class="col-xs-view">{{series.detail}}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>

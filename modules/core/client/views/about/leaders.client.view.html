@@ -1,0 +1,111 @@
+<div class="{{header}} subnav hidden-xs" header>
+  <ul>
+    <li>
+      <a href="/ministries"> Ministries</a>
+    </li>
+    <li>
+      <a href="/gc"> GC's</a>
+    </li>
+    <li>
+      <a href="/leaders"> Leaders</a>
+    </li>
+    <li>
+      <a href="/about"> About</a>
+    </li>
+  </ul>
+</div>
+
+
+<section ng-controller="LeadersController">
+
+  <div class="imagetop"></div>
+
+  <section class="text-center">
+    <h1>Leaders</h1>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 hidden-xs">
+
+        <h4>Ministries</h4>
+        <!--<div class="form-group">-->
+          <!--<input type="text" class="form-control input-sm" placeholder="Search Book"-->
+                 <!--ng-model="$parent.searchText" ui-clear>-->
+        <!--</div>-->
+        <ul class="nav nav-pills nav-stacked gallery-filter-items">
+          <li ng-class="{'active': $parent.searchText == ''}">
+            <a href="" ng-click="filterSearch('')">
+              All
+              <span class="badge pull-right">{{(leaders| filter:'').length}}</span>
+            </a>
+          </li>
+          <li ng-repeat="item in filterSections"
+              ng-class="{'active': item == $parent.searchText}">
+            <a href="" ng-click="filterSearch(item)">
+              {{item}}
+              <span class="badge pull-right">{{(leaders| filter:item).length}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 hover-click" ng-repeat="person in leaders| filter:searchText">
+            <a ng-click="selectPerson(person)" class="fade-hover" href="" data-toggle="modal" data-target="#myModal">
+              <img-resp imageclass="'fade-hover'" imageurl="'/modules/core/client/img/people/' + person.pic"></img-resp>
+            </a>
+            <a href="" ng-click="selectPerson(person)">{{person.firstName}} {{person.secondName}}</a> <br>
+            <small class="text-muted" ng-repeat="min in person.ministries">
+              <span ng-if="person.ministries.length-1 > $index">{{min}} - </span>
+              <span ng-if="person.ministries.length-1 === $index">{{min}}</span>
+            </small>
+            <p class="col-xs-view">{{person.gc}}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{selectedPerson.firstName}} {{selectedPerson.secondName}}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3">
+              <img src="/modules/core/client/img/people/{{selectedPerson.pic}}" alt="person pic"
+                   style="width:100%;border-radius: 50px;">
+            </div>
+            <div class="col-xs-9">
+              <h3>About</h3>
+              <p>{{selectedPerson.details}}</p>
+              <h3>{{selectedPerson.gc}} GC</h3>
+              <p>{{selectedPerson.firstName}} is part of the {{selectedPerson.gc}} gospel community.</p>
+              <h3>Ministries {{selectedPerson.firstName}} is involved in</h3>
+              <p ng-repeat="min in selectedPerson.ministries">{{min}}</p>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="break"></div>
+
+
+</section>

@@ -1,16 +1,23 @@
-<nav class="navbar navbar-default navbar-fixed-top" ng-controller="HeaderController" header>
+<nav class="{{header}} navbar navbar-default navbar-fixed-top" ng-controller="HeaderController" header>
   <div class="container-fluid">
-    <a href="#!" class="{{header}} navbar-header logo"></a>
+    <a href="/" class="{{header}} navbar-header logo"></a>
 
 
     <ul class="nav navbar-nav navbar-right hidden-xs">
       <li>
-        <a href="#!"><span class="glyphicon glyphicon-volume-up"></span> Resources</a>
+        <a href="/new" id="new"><span class="fa fa-star"></span> Im New</a>
       </li>
       <li>
-        <a href=""><span class="glyphicon glyphicon-earphone"></span> Contact</a>
+        <a href="/about" id="about"><span class="fa fa-info-circle"></span> About</a>
+      </li>
+      <li>
+        <a href="/sermonseries"><span class="fa fa-book"></span> Resources</a>
+      </li>
+      <li>
+        <a href="/contact"><span class="fa fa-map-pin"></span> Contact</a>
       </li>
     </ul>
+
 
 
     <div class="dropdown pull-right visible-xs">
@@ -19,13 +26,20 @@
       </button>
       <ul class="dropdown-menu" aria-labelledby="dLabel">
         <li>
-          <a href="#!"><span class="glyphicon glyphicon-volume-up"></span> Resources</a>
+          <a href="/new"><span class="fa fa-star"></span> Im New</a>
         </li>
         <li>
-          <a href=""><span class="glyphicon glyphicon-earphone"></span> Contact</a>
+          <a href="/about"><span class="fa fa-info-circle"></span> About</a>
+        </li>
+        <li>
+          <a href="/sermonseries"><span class="fa fa-book"></span> Resources</a>
+        </li>
+        <li>
+          <a href="/contact"><span class="fa fa-map-pin"></span> Contact</a>
         </li>
       </ul>
     </div>
 
   </div>
 </nav>
+

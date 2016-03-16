@@ -1,3 +1,32 @@
+.slider-btn {
+  position: absolute;
+  top: 0;
+  border: none;
+  background: none;
+  width: 80px;
+  height: 100vh;
+  outline: 0;
+  z-index: 1;
+  -webkit-transition: 0.5s;
+  /* Safari */
+  transition: 0.5s; }
+
+.slider-next {
+  right: 0; }
+
+.slider-btn:hover {
+  background: #595959;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  /* Safari */
+  transition: 0.5s; }
+
+.slider-btn:hover .slider-icon {
+  color: white;
+  -webkit-transition: 0.5s;
+  /* Safari */
+  transition: 0.5s; }
+
 .fullSlider {
   overflow: hidden;
   width: 100%;

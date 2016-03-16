@@ -1,10 +1,17 @@
 .break {
   height: 200px;
   width: 100%;
-  background: url("/modules/core/client/img/slider/welcome.jpg") no-repeat center scroll;
+  background: url("/modules/core/client/img/break.jpg") no-repeat center scroll;
   background-color: black;
   background-attachment: fixed;
   background-size: cover; }
+
+.text-section {
+  padding-top: 10px;
+  padding-bottom: 40px; }
+
+.col-xs-view {
+  display: none; }
 
 #footer {
   background: #595959;
@@ -12,4 +19,6 @@
 
 @media screen and (max-width: 768px) {
   .break {
-    height: 100px; } }
+    height: 100px; }
+  .col-xs-view {
+    display: block; } }

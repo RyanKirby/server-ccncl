@@ -6,7 +6,7 @@ angular.module('core')
             restrict: 'A',
             link: function (scope, element, attrs, controller) {
 
-                angular.element($window).bind("scroll", function () {
+                angular.element($window).bind('scroll', function () {
                     if (this.pageYOffset >= 3) {
                         scope.header = 'not-top';
                     } else {

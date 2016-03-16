@@ -1,0 +1,125 @@
+<div class="{{header}} subnav hidden-xs" header>
+  <ul>
+    <li>
+      <a href="/ministries"> Ministries</a>
+    </li>
+    <li>
+      <a href="/gc"> GC's</a>
+    </li>
+    <li>
+      <a href="/leaders"> Leaders</a>
+    </li>
+    <li>
+      <a href="/about"> About</a>
+    </li>
+  </ul>
+</div>
+
+
+<section ng-controller="GcController">
+
+  <div class="imagetop"></div>
+
+  <section class="text-center">
+    <h1>Gospel Communities</h1>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-3 hidden-xs">
+
+        <h4>Areas of Newcastle</h4>
+        <!--<div class="form-group">-->
+        <!--<input type="text" class="form-control input-sm" placeholder="Search Book"-->
+        <!--ng-model="$parent.searchText" ui-clear>-->
+        <!--</div>-->
+        <ul class="nav nav-pills nav-stacked gallery-filter-items">
+          <li ng-class="{'active': $parent.searchText == ''}">
+            <a href="" ng-click="filterSearch('')">
+              All
+              <span class="badge pull-right">{{(gcs| filter:'').length}}</span>
+            </a>
+          </li>
+          <li ng-repeat="item in filterSections"
+              ng-class="{'active': item == $parent.searchText}">
+            <a href="" ng-click="filterSearch(item)">
+              {{item}}
+              <span class="badge pull-right">{{(gcs| filter:item).length}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="col-sm-9">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">What is a GC?</div>
+              <div class="panel-body">
+                <p>Gospel communities are all about knowing Jesus and making Him known. They are communities of people that
+                  are centred on knowing, believing and living out the implication of the gospel together as a family in the
+                  day-to-day and the extraordinary.
+                </p>
+                <p>
+                  They meet regularly in each others homes and we enjoy meals together, study the bible, disciple one
+                  another, look for opportunities to serve, bless and reach out to our broader neighbourhood with the
+                  gospel.
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="col-md-4 col-sm-6 hover-click" ng-repeat="gc in gcs| filter:searchText">
+            <a ng-click="selectGc(gc)" class="fade-hover" href="" data-toggle="modal" data-target="#myModal">
+              <img-resp imageclass="'fade-hover'" imageurl="'/modules/core/client/img/gc/' + gc.thumbnail"></img-resp>
+            </a>
+            <a href="" ng-click="selectGc(gc)">{{gc.name}}</a><br>
+            <p>
+              <small>{{gc.leaders.leaderone.firstname}} and {{gc.leaders.leadertwo.firstname}}
+                {{gc.leaders.leaderone.secondname}}
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">{{selectedGc.name}}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3">
+              <img src="/modules/core/client/img/gc/{{selectedGc.thumbnail}}" alt="gc pic"
+                   style="width:100%;border-radius: 50px;">
+            </div>
+            <div class="col-xs-9">
+              <h3>About</h3>
+              <p>{{selectedGc.details}}</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="break"></div>
+
+
+</section>

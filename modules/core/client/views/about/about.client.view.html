@@ -1,0 +1,390 @@
+<div ng-controller="AboutController">
+
+  <div class="{{header}} subnav hidden-xs" header>
+    <ul>
+      <li>
+        <a href="/ministries"> Ministries</a>
+      </li>
+      <li>
+        <a href="/gc"> GC's</a>
+      </li>
+      <li>
+        <a href="/leaders"> Leaders</a>
+      </li>
+      <li>
+        <a href="/about"> About</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div class="imagetop"></div>
+
+  <section class="text-center">
+    <h1>Jesus Christ</h1>
+  </section>
+
+
+  <div id="knowjesus" class="container text-section">
+
+    <div class="col sub-sec">
+      <div class="col-sm-4">
+        <h2>The Man</h2>
+        <p>
+          Jesus is the Son of God, whose perfect example as a man shows us how to live our lives today.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h2>The Mission</h2>
+        <p>
+          Jesus lived his life on mission, to make God known and bring with Him Gods Kingdom.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h2>The Message</h2>
+        <p>
+          This is the good news - Jesus has dealt with Gods anger at sin and reconciled us to himself.
+        </p>
+      </div>
+      <div class="col-xs-12 text-center">
+        <a href="" data-toggle="modal" data-target="#jesusModel">More</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="break"></div>
+
+
+  <div id="makejesusknown" class="container text-section">
+    <h1 class="col-sm-12 text-center">Cornerstone</h1>
+    <hr>
+    <div class="col sub-sec">
+      <div class="col-sm-4">
+        <h2>Beliefs</h2>
+        <p>
+          Cornerstone exists so that people can come to know more about Jesus and learn how to get on board with His mission in the word. We don't expect everyone to be a christian, we actually love the fact that many come on Sundays to check out Jesus for the first time.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h2>Partnership</h2>
+        <p>
+          Cornerstone partners with ADVANCE. Advance is a global movement of churches partnering together to advance the Gospel through planting and strengthening churches.  To learn more <a href="http://www.advancemovement.com/about/our-mission">click here</a>.
+        </p>
+      </div>
+      <div class="col-sm-4">
+        <h2>Vision</h2>
+        <p>
+          Cornerstone is a movement of men and women called to know Jesus and make him known. We seek to live boldly in this generation by the words that we speak, the decisions we make and the lives we live.
+        </p>
+      </div>
+      <div class="col-xs-12 text-center">
+        <a href="" data-toggle="modal" data-target="#ccnclModel">More</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="ccnclModel" tabindex="-1" role="dialog" aria-labelledby=ccncyModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="ccncyModalLabel">Cornerstone</h4>
+        </div>
+        <div class="">
+          <div class="col-sm-3">
+            <h4>Tabs</h4>
+            <ul class="nav nav-pills">
+              <li role="presentation" class="{{modalActive[0]}}" ng-click="modalView(0)"><a href="">Beliefs</a></li>
+              <li role="presentation" class="{{modalActive[1]}}" ng-click="modalView(1)"><a href="">Identity</a></li>
+              <li role="presentation" class="{{modalActive[2]}}" ng-click="modalView(2)"><a href="">Vision</a></li>
+              <li role="presentation" class="{{modalActive[3]}}" ng-click="modalView(3)"><a href="">Partnership</a></li>
+            </ul>
+
+          </div>
+          <div ng-if="modal[0]" class="col-sm-9">
+            <h2>Beliefs</h2>
+            <p>
+              Cornerstone exists so that people can come to know more about Jesus and learn how to get on board with His
+              mission in the word. We done expect everyone to be a christian, we actually love the fact that many come
+              on Sundays to check out Jesus for the ﬁrst time.
+            </p>
+            <p>
+              As a church we seek to uphold the central truths of the christian faith including:
+            </p>
+
+            <h3>1. GOD</h3>
+
+            <p>
+              There is one God, who exists eternally in three distinct but equal persons: the Father, the Son, and the
+              Holy Spirit. God is unchangeable in his holiness, justice, wisdom and love. He is the almighty Creator,
+              Saviour and Judge who sustains and governs all things according to His sovereign will for His own glory.
+            </p>
+
+            <h3>2. THE BIBLE</h3>
+            <p>
+              God has revealed Himself in the Bible, which consists of the Old and New Testaments alone. Every word was
+              inspired by God through human authors, so that the Bible as originally given is in its entirety the Word
+              of God, without error and fully reliable in fact and doctrine. The Bible alone speaks with ﬁnal authority
+              and
+              is always sufﬁcient for all matters of belief and practice.
+            </p>
+            <h3>3. THE HUMAN RACE</h3>
+            <p>
+              All men and women, being created in the image of God, have inherent and equal dignity and worth. Their
+              greatest purpose is to obey, worship and love God. As a result of the fall of our ﬁrst parents, every
+              aspect
+              of human nature has been corrupted and all men and women are without spiritual life, guilty sinners and
+              hostile to God. Every person is therefore under the just condemnation of God and needs to be born again,
+              forgiven and reconciled to God in order to know and please Him.
+            </p>
+            <h3>4. THE LORD JESUS CHRIST</h3>
+            <p>
+              The Lord Jesus Christ is fully God and fully man. He was conceived by the Holy Spirit, born of a virgin,
+              and lived a sinless life in obedience to the Father. He taught with authority and all His words are true.
+              On
+              the cross he died in the place of sinners, bearing God’s punishment for their sin, redeeming them by His
+              blood. He rose from the dead and in His resurrection body ascended into heaven where He is exalted as Lord
+              of
+              all. He intercedes for His people in the presence of the Father.
+            </p>
+            <h3>5. SALVATION</h3>
+            <p>
+              Salvation is entirely a work of God’s grace and cannot be earned or deserved. It has been accomplished by
+              the Lord Jesus Christ and is offered to all in the gospel. God in His love forgives sinners whom He calls,
+              granting them repentance and faith. All who believe in Christ are justiﬁed by faith alone, adopted into
+              the family of God and receive eternal life.
+            </p>
+            <h3>6. THE HOLY SPIRIT</h3>
+            <p>
+              The Holy Spirit has been sent from heaven to glorify Christ and to apply His work of salvation. He
+              convicts sinners, imparts spiritual life and gives a true understanding of the Scriptures. He indwells all
+              believers, brings assurance of salvation and produces increasing likeness to Christ. He builds up the
+              Church and
+              empowers its members for worship, service and mission.
+            </p>
+            <h3>7. THE CHURCH</h3>
+            <p>
+              The universal Church is the body of which Christ is the head and to which all who are saved belong. It is
+              made visible in local churches, which are congregations of believers who are committed to each other for
+              the
+              worship of God, the preaching of the Word, the administering of Baptism and the Lord’s Supper; for
+              pastoral
+              care and discipline, and for evangelism. The unity of the body of Christ is expressed within and between
+              churches by mutual love, care and encouragement. True fellowship between churches exists only where they
+              are
+              faithful to the gospel.
+            </p>
+            <h3>8. BAPTISM AND THE LORD’S SUPPER</h3>
+            <p>
+              Baptism and the Lord’s Supper have been given to the churches by Christ as visible signs of the gospel.
+              Baptism is a symbol of union with Christ and entry into his Church but does not impart spiritual life. The
+              Lord’s Supper is a commemoration of Christ’s sacriﬁce offered once for all and involves no change in the
+              bread and wine. All its blessings are received by faith.
+            </p>
+            <h3>9. THE FUTURE</h3>
+            <p>
+              The Lord Jesus Christ will return in glory. He will raise the dead and judge the world in righteousness.
+              The
+              wicked will be sent to eternal punishment and the righteous will be welcomed into a life of eternal joy in
+              fellowship with God. God will make all things new and will be gloriﬁed forever.
+            </p>
+          </div>
+          <div ng-if="modal[1]" class="col-sm-9">
+            <h2>Identity</h2>
+
+            <p>
+              At Cornerstone we want to be identiﬁed by these statements.
+            </p>
+
+            <h3>Bible Based</h3>
+
+            <p>
+              God has chosen to reveal Himself to us by His word. (just put this in) The Bible is God’s ﬁnal, infallible
+              revelation of Himself, our world and our place in it. We therefore seek to read, learn, teach and submit
+              to the Scriptures. The Bible is not a truth amongst other truths, but the perfect truth of God. We hold to
+              the Five Solas of the Reformation: Sola Scriptura (by Scripture alone; 2 Timothy 3:10-4:5); Sola Fide (by
+              faith alone; Hebrew 9:1-15); Sola Gratia (by grace alone; Ephesians 2:1-10), Solus Christus (through
+              Christ alone; John 3:1-2) Soli Deo Gloria (glory to God alone; Romans 5:1-11).
+            </p>
+            <h3>Christ-Centred</h3>
+
+            <p>
+              The head of the church is Jesus (just put this in) (Ephesians 1:22). He plants the church (Hebrews 3:1),
+              leads the church (Colossians 1:18), loves the church (Ephesians 5), builds the church (Matthew 16:18),
+              rules the church (Colossians 2:9 ), redeemed the church (Galatians 3:10-14), is present with the church
+              (Matthew 28:18- 20) and puriﬁes the church (Ephesians 5). Jesus is to be central in our worship, in our
+              prayers and preaching, in our singing and weeping, in our living and in our dying. We’re committed to
+              being a community where people can know Jesus and make Jesus known
+            </p>
+            <h3>Mission-Minded</h3>
+
+            <p>
+              In addition to bringing people to Christ we also want to be sent out with Christ.(just put this one line
+              in) We take Jesus seriously when He said, “as the Father has sent me so I send you” (John 20:21).
+            </p>
+            <p>
+              Mission is therefore not reserved for just a selected few, but a privileged responsibility we all share
+              toward our unreached friends, family, work colleagues and neighbours in this city. Our role is to love,
+              pray and declare. God’s role is to equip us for those tasks, provide opportunities and awaken hearts to
+              the gospel
+            </p>
+            <h3> Disciple-Developing</h3>
+
+            <p>
+              Jesus’ disciples were ordinary men and women who left everything to ‘follow Jesus’ (Mark 1:18) We want to
+              do the same. In Mark’s gospel alone there are 10 instances of people who were so struck by Jesus’ message
+              and ministry that they left everything and ‘followed Him’. Being a disciple is thus ‘to follow’. And so,
+              as we follow Jesus personally, likewise as the gathered body of Christ, we must be committed to
+              disciple–developing. We are to be disciples of Jesus, who disciple others towards maturity in Christ
+            </p>
+            <h3>Spirit-Saturated</h3>
+
+            <p>
+              The Holy Spirit is a person (John 16:13) and an equal member of the Trinity (1 Corinthians 3:16). Jesus
+              ministered in the power of the Holy Spirit (Luke 4:14) and promised to give the Spirit to His disciples
+              (John 16:7). The promised gift of the Holy Spirit was fulﬁlled on the day of Pentecost (Acts 2:1).
+            </p>
+            <p>
+              All believers are ‘indwelt by the Holy Spirit’ (1 Corinthians 3; Ephesians 1:13). The Spirit convicts
+              (John 16:8-11), renews (John 3; 1 Corinthians 2:14), illuminates (John 14:25), transforms (Galatians 5),
+              gifts (1 Corinthians 12) and empowers us for lives of worship (John 14).
+            </p>
+
+          </div>
+          <div ng-if="modal[2]" class="col-sm-9">
+            <h2>Vision</h2>
+            <p>
+              Cornerstone is a movement of men and women called to know Jesus and make him known. We seek to live boldly
+              in this generation by the words that we speak, the decisions we make and the lives we live.
+            </p>
+            <p>
+              At Cornerstone we want to live lives that are Centred on the Gospel (the good news of Jesus) & led by His
+              Spirit. We want to be a community of people that are on mission for the Gospel. All we are, we are because
+              of Jesus. Now, all we do, we do because of Jesus.
+            </p>
+            <p>
+              At Cornerstone we want to be known for:
+            </p>
+            <h3>
+              Biblical Teaching and Training
+            </h3>
+            <p>
+              Jesus is our teacher. His words are the words of eternal life (John 6) Faith comes form hearing His word
+              (Romans 10:17) We are transformed by the renewing our mind (Romans 12:2)
+            </p>
+            <p>
+              We not only seek to connect people to Christ, but also want them to deepen their knowledge of and trust in
+              Christ. We want to equip people for engagement in the world.
+            </p>
+            <h3>
+              Humble, Courageous & Sacriﬁcial Leadership
+            </h3>
+            <p>
+              Jesus is the senior pastor of our church. We want to be led by Jesus, lead like Jesus and lead others to
+              Jesus. We want to train men and women for leadership in the home, workplace, university and church.
+            </p>
+            At Cornerstone we want to model to the wider city of Newcastle a different and countercultural city. We want
+            to model a gospel-centred life in the areas of marriage, sexuality, ﬁnances, community and truth.
+            </p>
+            <h3>
+              Communities of Life, Love & Mission
+            </h3>
+            <p>
+              God is by nature in community(Father, Son and Holy Spirit). At Cornerstone we seek to not only grow in
+              size and inﬂuence, but also in closeness and connection.
+            </p>
+            <p>
+              We want to see people welcomed and join our midweek gospel communities that exist to serve their
+              neighbourhoods.
+            </p>
+
+            <h3>
+              Commitment to Gospel Growth
+            </h3>
+            <p>
+              Jesus is on mission to seek and save the lost (Luke 9:10) We want to follow Him.
+            </p>
+            <p>
+              Our commitment to this will be reﬂected in the language we use, the lives we live, the meetings we host,
+              the prayers we pray, the churches we plant, the songs we sing and organisations we partner with.
+            </p>
+
+            <h3>
+              God-Centred Generosity
+            </h3>
+            <p>
+              The generosity of God is displayed perfectly in the life, death and resurrection of Jesus. His generosity
+              is costly, indiscriminate, selﬂess and abundant.
+            </p>
+            <p>
+              At Cornerstone we seek to mirror this generosity.
+            </p>
+          </div>
+          <div ng-if="modal[3]" class="col-sm-9">
+            <h2>Partners</h2>
+            <h4>Advance</h4>
+            <p>
+              Cornerstone partners with ADVANCE. Advance is a global movement of churches partnering together to advance the Gospel through planting and strengthening churches.
+            </p>
+            <p>
+            To learn more : <a href="http://www.advancemovement.com/about/our-mission">http://www.advancemovement.com/about/our-mission</a>
+            </p>
+
+          </div>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="jesusModel" tabindex="-1" role="dialog" aria-labelledby="jesusModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="jesusModalLabel">Jesus</h4>
+        </div>
+        <div class="modal-body">
+
+          <h2>The Man</h2>
+          <p>
+            Jesus was born in a small rural town roughly 2000 years ago and lived a relatively quiet life until the age
+            of 30 when He began His public ministry. Over the next three years he preached the gospel, performed
+            miracles and through this combination of word and works He showed Himself as God on the Earth.
+          </p>
+          <h2>The Mission</h2>
+          <p>
+            Jesus came into the world on a mission: to make God known, to bring in God’s Kingdom , and to accomplish
+            Gods salvation. He did this through his life of perfect obedience to His Father, His sacrificial death in
+            the place of sinful men and women, and His victorious resurrection from the dead. Jesus is, therefore, the
+            saviour of all who out their faith in Him.
+          </p>
+          <h2>The Message</h2>
+          <p>
+            This is the good news for a broken world. Jesus has dealt with Gods anger at sin and reconciled us to
+            himself. He has cleansed us of our guilts and shame, opened the way to eternal life, and He has given us His
+            Holy Spirit to enable us to live for Him. This is the message that the church has been charged to proclaim
+            through every generation until Jesus returns. In that day all things will be made new, to the praise of His
+            glorious grace.
+          </p>
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
