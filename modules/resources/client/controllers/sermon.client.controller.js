@@ -13,8 +13,16 @@ angular.module('resources').controller('SermonController', ['$scope', 'Authentic
                 $scope.sermon = res.data;
                 $scope.sermon.verses = [{b: 'Gen', v: '1:1-5'}, {b: 'Psm', v: '36:1-15'}];
                 $scope.filterSections = $scope.sermon.verses
-                for(var i in $scope.sermon.preachers){
+                for (var i in $scope.sermon.preachers) {
                     $scope.sermon.preachers[i].id = i;
+                }
+                for (var j in $scope.sermon.sermons) {
+                    var name = $scope.sermon.sermons[j].preacher.name;
+                    for (var ji in $scope.sermon.preachers) {
+                        if ($scope.sermon.preachers[ji].name === name) {
+                            $scope.sermon.sermons[j].preacher.id = $scope.sermon.preachers[ji].id;
+                        }
+                    }
                 }
             });
         };

@@ -62,7 +62,11 @@
           <div class="col-sm-4 col-xs-12 sermon-tile sermon-tile-{{sermon.preacher.id}}"
                ng-repeat="sermon in sermon.sermons| filter:searchText">
             <a href="" class="sermon-title" ng-click="selectSermon(sermon)" data-toggle="modal" data-target="#myModal">
-              <h4><span class="glyphicon glyphicon-play sermon-{{sermon.preacher.id}}" aria-hidden="true"></span>
+              <h4 ng-if="sermon.title.length >= 13"><span class="glyphicon glyphicon-play sermon-{{sermon.preacher.id}}" aria-hidden="true"></span>
+                {{sermon.title | limitTo:10}}...</h4>
+            </a>
+            <a href="" class="sermon-title" ng-click="selectSermon(sermon)" data-toggle="modal" data-target="#myModal">
+              <h4 ng-if="sermon.title.length < 13"><span class="glyphicon glyphicon-play sermon-{{sermon.preacher.id}}" aria-hidden="true"></span>
                 {{sermon.title}}</h4>
             </a>
             <div style="padding-left: 5px;">
