@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('core')
-    .directive('slider', function ($timeout) {
+    .directive('slider', function ($timeout, $window) {
         return {
             restrict: 'EA',
             scope: {
@@ -13,9 +13,27 @@ angular.module('core')
             templateUrl: '/modules/core/client/ng/ng-template/slider.html',
             link: function (scope, element, attrs, controller) {
 
-                var backSlider = ['height:100%;width:100%;background:url(', ') no-repeat center scroll;background-color: black;background-attachment: fixed;-webkit-background-size: cover; -moz-background-size: cover;background-size: cover;'],
-                    textSlider = ['background: url(', ') no-repeat center scroll;background-size: 250px;width:100%;'];
 
+                var win = angular.element($window);
+                var width = win[0].innerWidth;
+                var size = '';
+
+
+                if(width >= 1280){
+                    size = 'background-size:500px;'
+                } else if (width < 1280 && width >=  900){
+                    size = 'background-size:400px';
+                } else if (width < 900 && width >=  700){
+                    size = 'background-size:300px';
+                } else if (width < 700 && width >=  400){
+                    size = 'background-size:250px';
+                } else {
+                    size = 'background-size:150px';
+                }
+
+
+                var backSlider = ['height:100%;width:100%;background:url(', ') no-repeat center scroll;background-color: black;background-attachment: fixed;-webkit-background-size: cover; -moz-background-size: cover;background-size: cover;'],
+                    textSlider = ['background: url(', ') no-repeat center scroll;width:100%;' + size];
 
                 scope.sliderStyleOne = backSlider[0] + scope.sliderone[0] + backSlider[1];
                 scope.sliderClassOne = 'fullsliderPicIn';
@@ -25,6 +43,7 @@ angular.module('core')
 
                 scope.fullSlider = 0;
                 scope.loop = true;
+
 
                 /**
                  * Slider Loop
@@ -38,6 +57,30 @@ angular.module('core')
                             }
                         }, 5000);
                     }
+                });
+
+
+
+
+                angular.element($window).bind('resize', function () {
+                    width =  this.innerWidth;
+                    if(width >= 1280){
+                        size = 'background-size:500px;'
+                    } else if (width < 1280 && width >=  900){
+                        size = 'background-size:400px';
+                    } else if (width < 900 && width >=  700){
+                        size = 'background-size:300px';
+                    } else if (width < 700 && width >=  400){
+                        size = 'background-size:250px';
+                    } else {
+                        size = 'background-size:150px';
+                    }
+
+                    textSlider = ['background: url(', ') no-repeat center scroll;width:100%;' + size];
+
+
+                    scope.$apply();
+
                 });
 
                 /**

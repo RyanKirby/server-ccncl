@@ -1,8 +1,11 @@
+.navbar{
+}
+
 .subnav {
   position: fixed;
   background: #595959;
   width: 100%;
-  height: 45px;
+  height: 100px;
   right: 0;
   top: 60px;
   padding: 5px;
@@ -54,7 +57,7 @@
 
 .navbar {
   background: #ffffff;
-  height: 60px;
+  height: 130px;
   -webkit-transition: 0.5s;
   /* Safari */
   transition: 0.5s; }
@@ -69,6 +72,13 @@
 .navbar .dropdown {
   padding: 10px; }
 
+.blah{
+  margin-top:45px;
+}
+
+.not-top.blah{
+  margin-top:0
+}
 .not-top.logo {
   width: 40px;
   height: 40px;
@@ -81,6 +91,7 @@
 
 .not-top.navbar {
   opacity: 0.9;
+  height:55px;
   -webkit-transition: 0.5s;
   /* Safari */
   transition: 0.5s; }
@@ -102,3 +113,149 @@
     -webkit-transition: 0.5s;
     /* Safari */
     transition: 0.5s; } }
+
+
+#about:hover + #about-dd{
+  display:block;
+}
+
+#about-dd{
+  display: none;
+}
+
+#about-dd:hover{
+  display:block;
+}
+
+#connected:hover + #connected-dd {
+  display: block;
+}
+
+
+#connected-dd{
+  display: none;
+}
+
+#connected-dd:hover{
+  display:block;
+}
+
+.dd-nav{
+  list-style: none;
+  border-top: 2px solid black;
+  width:100%;
+  text-align: center;
+  color:white;
+  cursor:pointer;
+
+}
+
+.dd-nav-btn{
+  padding-top:5px;
+  padding-bottom: 5px;
+  background: black;
+  opacity: 0.8;
+  width:100%;
+  margin-top: 2px;
+}
+
+.dd-nav-btn a{
+  color:white;
+}
+
+.dd-nav-btn:hover{
+  opacity: 0.9;
+}
+
+.btn-1{
+  position:relative;
+  -webkit-animation: drop 1s;
+  animation: drop 1s; }
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drop {
+  0% {
+    opacity: 0;
+    left:-20px;}
+  50% {
+    opacity: 0.8;
+    left:0;}
+  100% {
+    opacity: 0.8;
+    left:0;}}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    left:-20px;}
+  50% {
+    opacity: 0.8;
+    left:0;}
+  100% {
+    opacity: 0.8;
+    left:0;}}
+.btn-2{
+  position:relative;
+  -webkit-animation: drop1 1s;
+  animation: drop1 1s; }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drop1 {
+  0% {
+    opacity: 0;
+  left:-20px;}
+  10%{
+    opacity: 0;
+    left:-20px;}
+  60% {
+    opacity: 0.8;
+    left:0;}
+  100% {
+    opacity: 0.8;
+    left:0;}}
+
+@keyframes drop1 {
+  0% {
+    opacity: 0;
+    left:-20px;}
+  10%{
+    opacity: 0;
+    left:-20px;}
+  60% {
+    opacity: 0.8;
+    left:0;}
+  100% {
+    opacity: 0.8;
+    left:0;}}
+.btn-3{
+  position:relative;
+  -webkit-animation: drop2 1s;
+  animation: drop2 1s; }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drop2 {
+  0% {
+    opacity: 0;
+    left:-20px;}
+  20%{
+    opacity: 0;
+    left:-20px;}
+  60% {
+    opacity: 0.8;
+    left:0;}
+  100% {
+    opacity: 0.8;
+    left:0;}}
+
+@keyframes drop2 {
+  0% {
+    opacity: 0;
+    left:-20px;}
+  20%{
+    opacity: 0;
+    left:-20px;}
+  70% {
+    opacity: 0.8;
+    left:0;}
+  100% {
+    opacity: 0.8;
+    left:0;}}

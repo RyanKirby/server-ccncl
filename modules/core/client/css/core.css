@@ -4,14 +4,26 @@
   background: url("/modules/core/client/img/break.jpg") no-repeat center scroll;
   background-color: black;
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;}
 
 .text-section {
-  padding-top: 10px;
-  padding-bottom: 40px; }
+  padding-top: 30px;
+  padding-bottom: 60px;}
 
 .col-xs-view {
   display: none; }
+
+.page-title{
+  padding-top: 140px;
+  padding-bottom: 20px;
+  margin: 0;
+  background: #595959;
+  color: #f2f2f2;
+}
+
+p{
+  font-size: 18px;
+}
 
 #footer {
   background: #595959;

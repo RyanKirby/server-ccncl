@@ -36,7 +36,7 @@
   position: absolute;
   z-index: 1;
   height: 50vh;
-  margin-top: 20vh;
+  margin-top: 30vh;
   opacity: 1;
   -webkit-animation: in 1s;
   animation: in 1s; }
@@ -45,18 +45,18 @@
 @-webkit-keyframes in {
   0% {
     opacity: 0;
-    margin-top: 10vh; }
+    margin-top: 20vh; }
   100% {
     opacity: 1;
-    margin-top: 20vh; } }
+    margin-top: 30vh; } }
 
 @keyframes in {
   0% {
     opacity: 0;
-    margin-top: 10vh; }
+    margin-top: 20vh; }
   100% {
     opacity: 1;
-    margin-top: 20vh; } }
+    margin-top: 30vh; } }
 
 .fullsliderPicIn {
   position: relative;
@@ -100,7 +100,7 @@
   position: absolute;
   z-index: 1;
   height: 50vh;
-  margin-top: 40vh;
+  margin-top: 50vh;
   opacity: 0;
   -webkit-animation: textOut 1s;
   animation: textOut 1s; }
@@ -109,15 +109,15 @@
 @-webkit-keyframes textOut {
   0% {
     opacity: 1;
-    margin-top: 20vh; }
+    margin-top: 30vh; }
   100% {
     opacity: 0;
-    margin-top: 40vh; } }
+    margin-top: 50vh; } }
 
 @keyframes textOut {
   0% {
     opacity: 1;
-    margin-top: 20vh; }
+    margin-top: 30vh; }
   100% {
     opacity: 0;
-    margin-top: 40vh; } }
+    margin-top: 50vh; } }

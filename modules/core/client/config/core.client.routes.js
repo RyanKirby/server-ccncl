@@ -29,17 +29,21 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 url: '/leaders',
                 templateUrl: 'modules/core/client/views/about/leaders.client.view.html'
             })
-            .state('ministries', {
-                url: '/ministries',
-                templateUrl: 'modules/core/client/views/about/ministries.client.view.html'
+            .state('kids&youth', {
+                url: '/kids&youth',
+                templateUrl: 'modules/core/client/views/about/kidsandyouth.client.view.html'
             })
-            .state('gc', {
-                url: '/gc',
+            .state('homegroup', {
+                url: '/homegroup',
                 templateUrl: 'modules/core/client/views/about/gc.client.view.html'
             })
             .state('new', {
                 url: '/new',
                 templateUrl: 'modules/core/client/views/new/new.client.view.html'
+            })
+            .state('students', {
+                url: '/students',
+                templateUrl: 'modules/core/client/views/about/students.client.view.html'
             })
             .state('not-found', {
                 url: '/not-found',

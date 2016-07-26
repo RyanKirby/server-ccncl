@@ -9,27 +9,27 @@ angular.module('core').controller('LeadersController', ['$scope', 'Authenticatio
             {
                 firstName: 'Micheal',
                 secondName: 'Duff',
-                ministries: ['Elder', 'GC Leader'],
+                ministries: ['Pastor'],
                 gc: 'Jesmond',
                 pic: 'mike.jpg',
-                details: 'Michael serves as the lead elder at Cornerstone. He is married to Esole and they have three boys! As a family they moved to Newcastle in 2012.'
+                details: 'Michael serves as the lead pastor at Cornerstone. He is married to Esolé and they have three boys! As a family they moved from Johannesburg, South Africa, to Newcastle, UK, in 2012.'
             }, {
                 firstName: 'Eric',
                 secondName: 'Duong',
-                ministries: ['Elder', 'GC Leader'],
+                ministries: ['Pastor'],
                 gc: 'Heaton',
                 pic: 'eric.jpg',
-                details: 'Eric is married to Claire. Eric serves as one of the Elders at Cornerstone Church Newcastle. Eric grew up in a Christian household, but was baptised whilst at Newcastle University attending this very church. After his first degree Eric training at Durham university to become a chemistry teach and during his 2nd year in teaching felt the call to ministry. Eric has trained for pastoral ministry by studying at a PDip in ‘Theology and Religion’ at Durham university ad attaining his Masters at a WEST - seminary in wales. Eric serves on the preaching team, is responsible for the teaching and training of the church interns. His wife Claire leads the women’s ministry and together they lead and train all the gospel community leaders and lead a group in Heaton. Eric and Claire are assessing a calling to church plant and with the backing of Cornerstone Newcastle, they will lead the first church plant from this church. '
+                details: 'Eric is one of the church pastors at Cornerstone. He is married to Claire. Eric serves on the preaching team and is responsible for the teaching and training of the church interns. Eric and Claire are currently working towards planting a church into Manchester, with the full support of Cornerstone Church Newcastle.'
             },
             {
                 firstName: 'Joel',
                 secondName: 'Marsden',
-                ministries: ['Elder', 'GC Leader'],
+                ministries: ['Pastor'],
                 gc: 'Fenham',
                 pic: 'joel.jpg',
-                details: 'Joel is married to Lynette and they have 4 kids. He works as a full time GP on Tyneside. He became part of the eldership team in 2011.'
-            },
-            {
+                details: 'Joel has served as a church pastor at Cornerstone since 2011. He is married to Lynette and they have 4 kids. He heads up the musical worship team at Cornerstone and works as a full time GP in Tyneside.'
+            }
+            /*{
                 firstName: 'Esole',
                 secondName: 'Duff',
                 ministries: ['Kids', 'GC Leader'],
@@ -110,7 +110,7 @@ angular.module('core').controller('LeadersController', ['$scope', 'Authenticatio
                 gc: 'Heaton',
                 pic: 'shelley.jpg',
                 details: 'I' +"'"+'m Shelley. I am one of the interns at Cornerstone, as well as a waitress part time. I'+"'"+'m originally from Northern Ireland and moved to Newcastle to study in 2012. My life is mainly spent working with the students & women of our church and doing a host of background jobs, it is all great fun! If you don'+'"'+'t know me say hi!'
-            }
+            }*/
         ];
 
         $scope.selectPerson = function(person){
