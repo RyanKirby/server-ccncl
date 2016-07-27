@@ -1,10 +1,12 @@
 'use strict';
 
 angular.module('core')
-    .controller('ContactController', ['$scope', 'Authentication', 'uiGmapGoogleMapApi',
-        function ($scope, Authentication, uiGmapGoogleMapApi) {
+    .controller('ContactController', ['$scope', 'Authentication', 'uiGmapGoogleMapApi','$location',
+        function ($scope, Authentication, uiGmapGoogleMapApi,$location) {
             // This provides Authentication context.
             $scope.authentication = Authentication;
+
+            $location.hash('top');
 
             $scope.map = {center: {latitude: 54.973853, longitude: -1.609063}, zoom: 15, };
             $scope.options = {

@@ -1,10 +1,12 @@
 'use strict';
 
 // Articles controller
-angular.module('core').controller('LeadersController', ['$scope', 'Authentication',
-    function ($scope, Authentication) {
+angular.module('core').controller('LeadersController', ['$scope', 'Authentication','$location',
+    function ($scope, Authentication,$location) {
         $scope.authentication = Authentication;
 
+
+        $location.hash('top');
         $scope.leaders = [
             {
                 firstName: 'Micheal',

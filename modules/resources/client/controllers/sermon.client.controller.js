@@ -1,9 +1,11 @@
 'use strict';
 
 // Articles controller
-angular.module('resources').controller('SermonController', ['$scope', 'Authentication', 'Media', '$stateParams',
-    function ($scope, Authentication, Media, $stateParams) {
+angular.module('resources').controller('SermonController', ['$scope', 'Authentication', 'Media', '$stateParams', '$location',
+    function ($scope, Authentication, Media, $stateParams, $location) {
         $scope.authentication = Authentication;
+
+        $location.hash('top');
 
         /**
          * Scope function to find current sermon data
@@ -25,6 +27,53 @@ angular.module('resources').controller('SermonController', ['$scope', 'Authentic
                     }
                 }
             });
+
+            // $scope.sermon = {
+            //     title: 'Example 1',
+            //     preachers: ['Mike', 'Eric'],
+            //     sermons: [{
+            //         title: 'title 1 asdlj asdl jasldja lsjdasdlkj a',
+            //         description:'blah blah blah blah blah',
+            //         preacher:{
+            //             id:0,
+            //             name: 'Eric'
+            //         },
+            //         media: 'eph/We_Are_Adopted_Eric.mp3'
+            //     },
+            //         {
+            //             title: 'title 1',
+            //             description:'blah blah blah blah blah',
+            //             preacher:{
+            //                 id:0,
+            //                 name: 'Eric'
+            //             },
+            //             media: 'eph/We_Are_Adopted_Eric.mp3'
+            //         },
+            //         {
+            //             title: 'title 1',
+            //             description:'blah blah blah blah blah',
+            //             preacher:{
+            //                 id:1,
+            //                 name: 'Mike'
+            //             },
+            //             media: 'eph/We_Are_Adopted_Eric.mp3'
+            //         },
+            //         {
+            //             title: 'title 1',
+            //             description:'blah blah blah blah blah',
+            //             preacher:{
+            //                 id:1,
+            //                 name: 'Mike'
+            //             },
+            //             media: 'eph/We_Are_Adopted_Eric.mp3'
+            //         }
+            //
+            //     ],
+            //     detail: 'Blah blah blah blah',
+            //     book: 'Book 1',
+            //     thumbnail: '/osigs.jpeg'
+            // }
+
         };
 
         //todo implemnt properly!!!!

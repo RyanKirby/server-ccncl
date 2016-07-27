@@ -14,12 +14,7 @@
 .slider-next {
   right: 0; }
 
-.slider-btn:hover {
-  background: #595959;
-  opacity: 0.5;
-  -webkit-transition: 0.5s;
-  /* Safari */
-  transition: 0.5s; }
+
 
 .slider-btn:hover .slider-icon {
   color: white;

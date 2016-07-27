@@ -1,8 +1,10 @@
 'use strict';
 
 // Articles controller
-angular.module('core').controller('AboutController', ['$scope', 'Authentication',
-    function ($scope, Authentication) {
+angular.module('core').controller('AboutController', ['$scope', 'Authentication', '$location',
+    function ($scope, Authentication, $location) {
+
+        $location.hash('top');
 
         $scope.modal=[true,false,false,false];
         $scope.modalActive=['active','','',''];

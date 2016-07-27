@@ -1,10 +1,11 @@
 'use strict';
 
 // Articles controller
-angular.module('core').controller('MinController', ['$scope', 'Authentication',
-    function ($scope, Authentication) {
+angular.module('core').controller('MinController', ['$scope', 'Authentication','$location',
+    function ($scope, Authentication,$location) {
         $scope.authentication = Authentication;
 
+        $location.hash('top');
         //Dummy data...
         $scope.ministries = [
             {

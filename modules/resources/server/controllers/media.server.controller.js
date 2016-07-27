@@ -79,6 +79,7 @@ exports.getall = function (req, res) {
             res.json(sermonSeries);
         }
     });
+
 };
 
 /**

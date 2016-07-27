@@ -6,33 +6,14 @@
   padding-bottom: 5px; }
 
 .sermon-tile {
-  border-left: 5px solid black;
+  border-left: 5px solid grey;
   margin-top: 5px;
   margin-bottom: 5px; }
 
+.sermon-tile p{
+  font-size: 15px;
+}
+
 .sermon-title {
-  color: #000000; }
+  color: grey; }
 
-.sermon-tile-0 {
-  border-color: #b3daff; }
-
-.sermon-tile-1 {
-  border-color: #ffc2b3; }
-
-.sermon-tile-2 {
-  border-color: #c1f0c1; }
-
-.sermon-tile-3 {
-  border-color: #ffd9b3; }
-
-.sermon-0 {
-  color: #b3daff; }
-
-.sermon-1 {
-  color: #ffc2b3; }
-
-.sermon-2 {
-  color: #c1f0c1; }
-
-.sermon-3 {
-  color: #ffd9b3; }

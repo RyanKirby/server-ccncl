@@ -7,10 +7,45 @@ angular.module('resources').controller('ResourcesController', ['$scope', 'Authen
 
         //todo implement server properly!!
 
-        $scope.init = function() {
+        $scope.init = function () {
             Media.get().then(function(res){
                 $scope.sermonseries = res.data;
             })
+
+            // $scope.sermonseries = [{
+            //     title: 'Example 1',
+            //     preachers: ['Mike', 'Eric'],
+            //     sermons: [],
+            //     detail: 'Blah blah blah blah',
+            //     book: 'Book 1',
+            //     thumbnail: '/osigs.jpeg'
+            // }, {
+            //
+            //     title: 'Example 1',
+            //     preachers: ['Mike', 'Eric'],
+            //     sermons: [],
+            //     detail: 'Blah blah blah blah',
+            //     book: 'Book 1',
+            //     thumbnail: '/hearinggod.png'
+            // }, {
+            //
+            //     title: 'Example 1',
+            //     preachers: ['Mike', 'Eric'],
+            //     sermons: [],
+            //     detail: 'Blah blah blah blah',
+            //     book: 'Book 1',
+            //     thumbnail: '/advent.png'
+            // }, {
+            //
+            //     title: 'Example 1',
+            //     preachers: ['Mike', 'Eric'],
+            //     sermons: [],
+            //     detail: 'Blah blah blah blah',
+            //     book: 'Book 1',
+            //     thumbnail: '/osigs.jpeg'
+            // }
+            // ];
+
             //Media.create();
 
         }

@@ -1,10 +1,11 @@
 'use strict';
 
 // Articles controller
-angular.module('core').controller('GcController', ['$scope', 'Authentication',
-    function ($scope, Authentication) {
+angular.module('core').controller('GcController', ['$scope', 'Authentication','$location',
+    function ($scope, Authentication,$location) {
         $scope.authentication = Authentication;
 
+        $location.hash('top');
         $scope.gcs = [
             {
                 name:'Jesmond',
@@ -86,6 +87,23 @@ angular.module('core').controller('GcController', ['$scope', 'Authentication',
                 thumbnail:'kenton.jpg',
                 details:'The Kenton GC focus is taken from Acts 2:42 - 47. As a group we desire to to grow in our relationship with Christ, each other and those who don'+"'"+'t know Christ. Every Thursday at 7pm we meet and share food together. We build community by doing life together, so feel free to pop along and see what we are all about!'
             }
+            // ,
+            // {
+            //     name:'Jesmond Vale',
+            //     area:'North',
+            //     leaders:{
+            //         leaderone:{
+            //             firstname:'Pete',
+            //             secondname:'Mills'
+            //         },
+            //         leadertwo:{
+            //             firstname:'Shelley',
+            //             secondname:'Barclay'
+            //         }
+            //     },
+            //     thumbnail:'kenton.jpg',
+            //     details:'The Jesmond Vale GC meets in various houses around Jesmond Vale and West Jesmond. We eat together every week and are committed to discipling one another and seeing each other fulfil the mission that God has given us. Come join us Thursdays from 7pm.'
+            // }
         ];
 
         $scope.selectGc = function(gc){
