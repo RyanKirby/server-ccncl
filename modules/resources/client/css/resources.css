@@ -1,14 +1,2 @@
-.imagetop {
-  height: 250px;
-  width: 100%;
-  background: url("/modules/resources/client/img/resources.jpg") no-repeat bottom scroll;
-  background-color: black;
-  background-attachment: fixed;
-  background-size: cover; }
-
-@media screen and (max-width: 768px) {
-  .imagetop {
-    height: 200px; } }
-
 .hover-click:hover .fade-hover {
   opacity: 0.8; }

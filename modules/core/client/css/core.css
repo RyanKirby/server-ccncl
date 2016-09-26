@@ -14,11 +14,12 @@
   display: none; }
 
 .page-title{
-  padding-top: 140px;
-  padding-bottom: 20px;
+  position: absolute;
+  padding-top: 141px;
+  padding-bottom: 70px;
+  width:100%;
   margin: 0;
-  background: #595959;
-  border-bottom: 3px solid #1a1a1a;
+  background: rgba(0, 0, 0, 0.5);
   color: #f2f2f2;
 }
 
@@ -39,3 +40,16 @@ p{
     height: 100px; }
   .col-xs-view {
     display: block; } }
+
+
+.imagetop {
+  height: 250px;
+  width: 100%;
+  background: url("/modules/resources/client/img/resources.jpg") no-repeat bottom scroll;
+  background-color: black;
+  background-attachment: fixed;
+  background-size: cover; }
+
+@media screen and (max-width: 768px) {
+  .imagetop {
+    height: 200px; } }
