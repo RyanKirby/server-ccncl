@@ -1,0 +1,46 @@
+
+<!--Footer-->
+<footer>
+  <div id="footer" ng-controller="HomeController">
+    <div class="container">
+      <div class="row" style="padding-top:20px;padding-bottom: 20px">
+
+        <div class="col-sm-4">
+          <h3 style="border-bottom: 2px solid white;">Info</h3>
+          <br>
+          <p><b>Sunday Service, 10:30pm</b></p>
+          <p>E: info@ccncl.co.uk</p>
+          <p>1st Floor, Bamburgh House, Market Street, NE16BH</p>
+
+        </div>
+        <div class="col-sm-4">
+          <h3 style="border-bottom: 2px solid white;">Giving</h3>
+          <br>
+          <p>Cornerstone Church Newcastle</p>
+          <p>Account Number:239 48641</p>
+          <p>Sort Code: 40-34-18</p>
+        </div>
+        <div class="col-sm-4">
+          <h3 style="border-bottom: 2px solid white;">Social Media</h3>
+          <br>
+          <ul class="list-inline">
+            <li>
+              <a style="color:white" href="https://www.facebook.com/cornerstonechurchNCL?fref=ts"><i
+                class="fa fa-4x fa-facebook-square fa-fw"></i></a>
+            </li>
+            <li>
+              <a style="color:white" href="https://twitter.com/CornerstoneNCL"><i class="fa fa-4x fa-twitter-square fa-fw"></i></a>
+            </li>
+            <p class="pull-right"> <small> Copyright &copy; CornerstoneChurchNewcastle2016</small>
+              (<a ng-if="authentication.user.displayName" href="" ng-click="logout()" style="color:white"><small>Log Out</small></a><a ng-if="!authentication.user.displayName" href="/authentication/signin" style="color:white"><small>Log in</small></a>)
+
+
+            </p>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--/ Footer-->

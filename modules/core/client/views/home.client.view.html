@@ -1,9 +1,9 @@
-<div>
+<div class="ng-cloak" >
   <div ng-controller="SliderController">
     <slider id="top"
-            sliderone="['/modules/core/client/img/slider/welcome.jpg', '/modules/core/client/img/slider/welcome-text.png']"
-      slidertwo="['/modules/core/client/img/slider/vision.jpg', '/modules/core/client/img/slider/vision-text.png']"
-      sliderthree="['/modules/core/client/img/slider/hgbackground.png', '/modules/core/client/img/slider/hgtext.png']"></slider>
+            sliderone="['/modules/core/client/img/slider/slideone.png', '/modules/core/client/img/slider/textone.png']"
+      slidertwo="['/modules/core/client/img/slider/slidetwo.png', '/modules/core/client/img/slider/texttwo.png']"
+      sliderthree="['/modules/core/client/img/slider/slidethree.png', '/modules/core/client/img/slider/textthree.png']"></slider>
 
     <button ng-click="sliderPrevious()" class="slider-btn"><span
       class="btn-lg slider-icon glyphicon glyphicon-circle-arrow-left"></span></button>
@@ -87,4 +87,5 @@
       </div>
     </div>
   </div>
+  <section ng-include="'../modules/core/client/ng/ng-include/footer.html'"></section>
 </div>
