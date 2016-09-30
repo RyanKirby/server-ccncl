@@ -1,59 +1,101 @@
 .break {
-  height: 200px;
-  width: 100%;
-  background: url("/modules/core/client/img/break.jpg") no-repeat center scroll;
-  background-color: black;
-  background-attachment: fixed;
-  background-size: cover;}
-
-.text-section {
-  padding-top: 30px;
-  padding-bottom: 60px;}
-
-.col-xs-view {
-  display: none; }
-
-.page-title{
-  position: absolute;
-  padding-top: 141px;
-  padding-bottom: 70px;
-  width:100%;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f2f2f2;
+    height: 200px;
+    width: 100%;
+    background: url("/modules/core/client/img/break.jpg") no-repeat center scroll;
+    background-color: black;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-p{
-  font-size: 18px;
+.text-section {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.col-xs-view {
+    display: none;
+}
+
+.page-title {
+    position: absolute;
+    padding-top: 141px;
+    padding-bottom: 70px;
+    width: 100%;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f2f2f2;
+}
+
+@media screen and (max-width: 768px) {
+    .page-title {
+        padding-top: 91px;
+    }
+}
+
+p {
+    font-size: 18px;
 }
 
 #footer {
-  background: #595959;
-  color: #f2f2f2; }
+    padding-top: 30px;
+    padding-bottom: 70px;
+    background: #595959;
+    color: #f2f2f2;
+}
 
-#footer p{
-  font-size: 15px;
+#footer p {
+    font-size: 15px;
+}
+
+.footer-wrapper {
+    padding-top: 20px;
+}
+
+.footer-title {
+    border-bottom: 2px solid white;
+}
+
+.cp-rt {
+    padding-top: 15px;
+}
+
+.login {
+    font-size: 12px;
+}
+
+.social-media {
+    color: white;
+}
+
+.social-media:hover {
+    color: black;
 }
 
 @media screen and (max-width: 768px) {
-  .break {
-    height: 100px; }
-  .col-xs-view {
-    display: block; } }
+    .break {
+        height: 100px;
+    }
 
+    .col-xs-view {
+        display: block;
+    }
+}
 
 .imagetop {
-  height: 250px;
-  width: 100%;
-  background: url("/modules/resources/client/img/resources.jpg") no-repeat bottom scroll;
-  background-color: black;
-  background-attachment: fixed;
-  background-size: cover; }
+    height: 250px;
+    width: 100%;
+    background: url("/modules/resources/client/img/resources.jpg") no-repeat bottom scroll;
+    background-color: black;
+    background-attachment: fixed;
+    background-size: cover;
+}
 
 @media screen and (max-width: 768px) {
-  .imagetop {
-    height: 200px; } }
+    .imagetop {
+        height: 200px;
+    }
+}
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
+    display: none !important;
 }

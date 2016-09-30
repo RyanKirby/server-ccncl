@@ -1,14 +1,41 @@
-<div class="ng-cloak" >
-  <div ng-controller="SliderController">
+<div class="ng-cloak" ng-cloak>
+  <div ng-controller="SliderController" class="hidden-xs">
     <slider id="top"
             sliderone="['/modules/core/client/img/slider/slideone.png', '/modules/core/client/img/slider/textone.png']"
-      slidertwo="['/modules/core/client/img/slider/slidetwo.png', '/modules/core/client/img/slider/texttwo.png']"
-      sliderthree="['/modules/core/client/img/slider/slidethree.png', '/modules/core/client/img/slider/textthree.png']"></slider>
+            slidertwo="['/modules/core/client/img/slider/slidetwo.png', '/modules/core/client/img/slider/texttwo.png']"
+            sliderthree="['/modules/core/client/img/slider/slidethree.png', '/modules/core/client/img/slider/textthree.png']"></slider>
 
     <button ng-click="sliderPrevious()" class="slider-btn"><span
       class="btn-lg slider-icon glyphicon glyphicon-circle-arrow-left"></span></button>
     <button href="" ng-click="sliderNext()" class="slider-btn slider-next"><span
       class="btn-lg slider-icon glyphicon glyphicon-circle-arrow-right"></span></button>
+  </div>
+
+  <div class="mobile-welcome visible-xs text-center">
+    <div class="mobile-wrapper">
+      <div id="mob-wel" class="mobile-section-large">
+        <h3>Welcome to</h3>
+        <h2>Cornerstone Church</h2>
+        <h2>Sunday - 10:30am</h2>
+        <br>
+        <a href="/contact#top">More</a>
+        <!--<a href="/contact#top"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></a>-->
+
+      </div>
+      <div id="mob-know-jesus" class="mobile-section-small">
+        <h3>Know Jesus</h3><h4>Make Jesus Known</h4>
+        <br>
+        <a href="/about#top">More</a>
+        <!--<a href="/about#top"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></a>-->
+      </div>
+      <div id="mob-sermons" class="mobile-section-small">
+        <h3>Latest Sermon Series</h3>
+        <br>
+        <a href="/sermonseries#top">More</a>
+        <!--<a href="/sermonseries#top"><i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i></a>-->
+      </div>
+    </div>
+
   </div>
 
   <div id="ccncl" class="container text-section">
@@ -22,7 +49,7 @@
           North East of England. Whether you are young or old, student or professional, local or international we look
           forward to having you at our church this <b><i>Sunday at 10:30am!</i></b>
         </p>
-        <a href="/about">more</a>
+        <a href="/about#top">more</a>
       </div>
     </div>
   </div>
@@ -37,23 +64,26 @@
       <div class="col-sm-4">
         <h2>Jesus</h2>
         <p>
-          Jesus was the most influential person who has ever lived. His impact on human history around 2000 years has in-fluenced all that has followed since.
+          Jesus was the most influential person who has ever lived. His impact on human history around 2000 years has
+          in-fluenced all that has followed since.
         </p>
-        <a href="/about">more</a>
+        <a href="/about#top">more</a>
       </div>
       <div class="col-sm-4">
         <h2>Location</h2>
         <p>
-          If you want to know more about Jesus, come and join us each Sunday for our weekly services in Newcastle-upon-Tyne. Get directions, times and parking info here.
+          If you want to know more about Jesus, come and join us each Sunday for our weekly services in
+          Newcastle-upon-Tyne. Get directions, times and parking info here.
         </p>
-        <a href="/contact">more</a>
+        <a href="/contact#top">more</a>
       </div>
       <div class="col-sm-4">
         <h2>Sermons</h2>
         <p>
-          We believe understanding who Jesus is and what he’s done is the most important thing in our lives. That’s what we discuss each week in our sermons. Click below to listen.
+          We believe understanding who Jesus is and what he’s done is the most important thing in our lives. That’s what
+          we discuss each week in our sermons. Click below to listen.
         </p>
-        <a href="/sermonseries">more</a>
+        <a href="/sermonseries#top">more</a>
       </div>
     </div>
   </div>
@@ -68,22 +98,25 @@
       <div class="col-sm-4">
         <h2>Home Group</h2>
         <p>
-          Jesus was the most influential person who has ever lived. His impact on human history around 2000 years has in-fluenced all that has followed since.
+          Jesus was the most influential person who has ever lived. His impact on human history around 2000 years has
+          in-fluenced all that has followed since.
         </p>
-        <a href="/homegroup">more</a>
+        <a href="/homegroup#top">more</a>
       </div>
       <div class="col-sm-4">
         <h2>Events</h2>
         <p>
-          At Cornerstone we want to tell the people of our city all about Jesus. Click below to find out ways we’re doing this in the next few weeks </p>
-        <a href="/contact">more</a>
+          At Cornerstone we want to tell the people of our city all about Jesus. Click below to find out ways we’re
+          doing this in the next few weeks </p>
+        <a href="/contact#calender">more</a>
       </div>
       <div class="col-sm-4">
         <h2>Advance</h2>
         <p>
-          Cornerstone partners with ADVANCE. Advance is a global movement of churches partnering together to advance the Gospel. To learn more click below.
+          Cornerstone partners with ADVANCE. Advance is a global movement of churches partnering together to advance the
+          Gospel. To learn more click below.
         </p>
-        <a href="/about">more</a>
+        <a href="/about#top">more</a>
       </div>
     </div>
   </div>

@@ -5,7 +5,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         // This provides Authentication context.
         $scope.authentication = Authentication;
 
-        $location.hash('top');
+        // $location.hash('top');
         $scope.logout = function () {
             $http.get('/api/auth/signout');
         }

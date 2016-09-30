@@ -5,7 +5,7 @@ angular.module('core').controller('MinController', ['$scope', 'Authentication','
     function ($scope, Authentication,$location) {
         $scope.authentication = Authentication;
 
-        $location.hash('top');
+        // $location.hash('top');
         //Dummy data...
         $scope.ministries = [
             {

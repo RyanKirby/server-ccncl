@@ -5,7 +5,7 @@ angular.module('resources').controller('SermonController', ['$scope', 'Authentic
     function ($scope, Authentication, Media, $stateParams, $location) {
         $scope.authentication = Authentication;
 
-        $location.hash('top');
+        //$location.hash('top');
 
         /**
          * Scope function to find current sermon data

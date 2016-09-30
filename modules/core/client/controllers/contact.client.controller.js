@@ -6,7 +6,7 @@ angular.module('core')
             // This provides Authentication context.
             $scope.authentication = Authentication;
 
-            $location.hash('top');
+            // $location.hash('top');
 
             $scope.map = {center: {latitude: 54.973853, longitude: -1.609063}, zoom: 15, };
             $scope.options = {

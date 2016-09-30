@@ -4,7 +4,7 @@
 angular.module('core').controller('AboutController', ['$scope', 'Authentication', '$location',
     function ($scope, Authentication, $location) {
 
-        $location.hash('top');
+        // $location.hash('top');
 
         $scope.modal=[true,false,false,false];
         $scope.modalActive=['active','','',''];

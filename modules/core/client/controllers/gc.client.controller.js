@@ -5,7 +5,7 @@ angular.module('core').controller('GcController', ['$scope', 'Authentication','$
     function ($scope, Authentication,$location) {
         $scope.authentication = Authentication;
 
-        $location.hash('top');
+        // $location.hash('top');
         $scope.gcs = [
             {
                 name:'Jesmond',

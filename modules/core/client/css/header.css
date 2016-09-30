@@ -112,7 +112,38 @@
     background-size: 40px 40px;
     -webkit-transition: 0.5s;
     /* Safari */
-    transition: 0.5s; } }
+    transition: 0.5s; }
+  .navbar {
+    opacity: 0.9;
+    height:55px;
+    -webkit-transition: 0.5s;
+    /* Safari */
+    transition: 0.5s; }
+}
+
+@media screen and (max-width: 850px) and (min-width: 769px) {
+  .logo {
+    width: 40px;
+    height: 40px;
+    top:40px;
+    left: 20px;
+    background: url("/modules/core/client/img/brand/logo-small.png") no-repeat center;
+    background-size: 40px 40px;
+    -webkit-transition: 0.5s;
+    /* Safari */
+    transition: 0.5s; }
+
+  .not-top.logo {
+    width: 40px;
+    height: 40px;
+    top:0;
+    left: 20px;
+    background: url("/modules/core/client/img/brand/logo-small.png") no-repeat center;
+    background-size: 40px 40px;
+    -webkit-transition: 0.5s;
+    /* Safari */
+    transition: 0.5s; }
+}
 
 
 #about:hover + #about-dd{

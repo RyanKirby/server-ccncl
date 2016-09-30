@@ -6,7 +6,7 @@ angular.module('core').controller('LeadersController', ['$scope', 'Authenticatio
         $scope.authentication = Authentication;
 
 
-        $location.hash('top');
+        // $location.hash('top');
         $scope.leaders = [
             {
                 firstName: 'Micheal',

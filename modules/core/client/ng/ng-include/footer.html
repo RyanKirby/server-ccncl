@@ -1,12 +1,11 @@
-
 <!--Footer-->
 <footer>
   <div id="footer" ng-controller="HomeController">
     <div class="container">
-      <div class="row" style="padding-top:20px;padding-bottom: 20px">
+      <div class="footer-wrapper" class="row">
 
         <div class="col-sm-4">
-          <h3 style="border-bottom: 2px solid white;">Info</h3>
+          <h3 class="footer-title">Info</h3>
           <br>
           <p><b>Sunday Service, 10:30pm</b></p>
           <p>E: info@ccncl.co.uk</p>
@@ -14,27 +13,31 @@
 
         </div>
         <div class="col-sm-4">
-          <h3 style="border-bottom: 2px solid white;">Giving</h3>
+          <h3 class="footer-title">Giving</h3>
           <br>
           <p>Cornerstone Church Newcastle</p>
           <p>Account Number:239 48641</p>
           <p>Sort Code: 40-34-18</p>
         </div>
         <div class="col-sm-4">
-          <h3 style="border-bottom: 2px solid white;">Social Media</h3>
+          <h3 class="footer-title">Social Media</h3>
           <br>
           <ul class="list-inline">
             <li>
-              <a style="color:white" href="https://www.facebook.com/cornerstonechurchNCL?fref=ts"><i
+              <a class="social-media" href="https://www.facebook.com/cornerstonechurchNCL?fref=ts"><i
                 class="fa fa-4x fa-facebook-square fa-fw"></i></a>
             </li>
             <li>
-              <a style="color:white" href="https://twitter.com/CornerstoneNCL"><i class="fa fa-4x fa-twitter-square fa-fw"></i></a>
+              <a class="social-media" href="https://twitter.com/CornerstoneNCL"><i class="fa fa-4x fa-twitter-square fa-fw"></i></a>
             </li>
-            <p class="pull-right"> <small> Copyright &copy; CornerstoneChurchNewcastle2016</small>
-              (<a ng-if="authentication.user.displayName" href="" ng-click="logout()" style="color:white"><small>Log Out</small></a><a ng-if="!authentication.user.displayName" href="/authentication/signin" style="color:white"><small>Log in</small></a>)
-
-
+            <li>
+              <a class="social-media" href="https://twitter.com/CornerstoneNCL"><i class="fa fa-4x fa-instagram fa-fw"></i></a>
+            </li>
+            <p class="cp-rt pull-right"> <small> Copyright &copy; CornerstoneChurchNewcastle2016</small>
+              <a class="login social-media" ng-if="authentication.user.displayName" href="" ng-click="logout()">
+                <small>[Sign Out]</small></a>
+              <a class="login social-media" ng-if="!authentication.user.displayName" href="/authentication/signin">
+                <small>[Login]</small></a>
             </p>
           </ul>
         </div>
