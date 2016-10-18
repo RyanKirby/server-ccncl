@@ -10,7 +10,7 @@ module.exports = function (app) {
     // Articles collection routes
 
 
-    app.route('/api/media')
+    app.route('/createmedia')
         .post(media.create);
 
     //app.route('')

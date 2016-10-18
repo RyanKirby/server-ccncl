@@ -12,55 +12,100 @@ var path = require('path'),
  * Create a article
  */
 exports.create = function (req, res) {
-    console.log('create media')
+    console.log('create media');
 
     console.log(req.body);
-    ////todo validation check
-    var media = new Media(req.body);
-    //
-    //console.log(media);
+
+    var title = '', preachers = [], sermons = [], detail = '', book = '', thumbnail = '', position=0, hideSermon = true;
+
+    if (req.body.title) {
+        title = req.body.title;
+    }
+    if (req.body.preachers) {
+        preachers = req.body.preachers;
+    }
+    if (req.body.sermons) {
+        sermons = req.body.sermons;
+    }
+    if (req.body.detail) {
+        detail = req.body.detail;
+    }
+    if (req.body.book) {
+        book = req.body.book;
+    }
+    if (req.body.thumbnail) {
+        thumbnail = req.body.thumbnail;
+    }
+    if (req.body.position) {
+        position = req.body.position;
+    }
+
+    if(req.body.hideSermon){
+        hideSermon = req.body.hideSermon;
+    }
 
 
+    var newMedia = {
+        title: title,
+        preachers: preachers,
+        sermons: sermons,
+        detail: detail,
+        book: book,
+        thumbnail: thumbnail,
+        position:position,
+        hideSermon: hideSermon
+    };
 
-    //   for (var x in test){
+    console.log(newMedia);
 
-    //      console.log(test[x]);
-//var media = new Media(test[x]);
-    //media.user = req.user;
+    var media = new Media(newMedia);
 
-    media.save(function (err) {
+    media.save(function (err, media) {
+        console.log(media);
+        console.log(err);
         if (err) {
             return res.status(400).send({
                 message: errorHandler.getErrorMessage(err)
             });
         } else {
-            // res.json(media);
+            res.json({msg:'ok',data:media});
         }
     });
-    // }
 
 };
 
 /**
  *
  */
-exports.update = function (req, res){
+exports.update = function (req, res) {
 
+    console.log('update');
     var id = req.body._id;
+    var hideSermon = true;
+    if(req.body.hideSermon != true || req.body.hideSermon != true){
+        hideSermon = req.body.hideSermon
+    };
+
     var newSeries = {
         title: req.body.title,
         preachers: req.body.preachers,
         sermons: req.body.sermons,
         detail: req.body.detail,
         book: req.body.book,
-        thumbnail: req.body.thumbnail
+        thumbnail :req.body.thumbnail,
+        position:req.body.position,
+        hideSermon: hideSermon
     }
 
-    Media.update({_id:id}, newSeries).exec(function(err, sermonSeries){
-        if(err){
+    console.log(newSeries);
+
+    Media.update({_id: id}, newSeries).exec(function (err, sermonSeries) {
+        console.log(err);
+        console.log(sermonSeries);
+        if (err) {
             res.json(err);
         } else {
-            res.json(sermonSeries);
+            res.json({msg:'ok',data:sermonSeries});
         }
     })
 

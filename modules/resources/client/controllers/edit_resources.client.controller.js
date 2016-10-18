@@ -1,34 +1,18 @@
 'use strict';
 
 // Articles controller
-angular.module('resources').controller('EditResourcesController', ['$scope', 'Authentication', 'Media',
-    function ($scope, Authentication, Media) {
+angular.module('resources').controller('EditResourcesController', ['$scope', 'Authentication', 'Media', '$timeout',
+    function ($scope, Authentication, Media, $timeout) {
         $scope.authentication = Authentication;
-
-        $scope.sermonSelected = []
 
         $scope.init = function () {
             Media.get().then(function (res) {
                 $scope.sermonseries = res.data;
                 $scope.selectedSermonSeries = res.data[0];
-                for (var i in res.data) {
-                    if (i === '0') {
-                        $scope.sermonSelected.push('active');
-                    } else {
-                        $scope.sermonSelected.push('');
-                    }
-                }
             })
         }
 
-        var currentSermonIndex = 0;
-
         $scope.selectSermonSeries = function (sermonseries, i) {
-            for (var j in $scope.sermonseries) {
-                $scope.sermonSelected[j] = '';
-            }
-            currentSermonIndex = i;
-            $scope.sermonSelected[i] = 'active';
             $scope.selectedSermonSeries = sermonseries;
         }
 
@@ -47,11 +31,15 @@ angular.module('resources').controller('EditResourcesController', ['$scope', 'Au
         }
 
         $scope.updateSermon = function () {
-
-            console.log($scope.selectedSermonSeries.detail);
-            console.log($scope.selectedSermonSeries);
-            Media.update($scope.selectedSermonSeries);
-
+            Media.update($scope.selectedSermonSeries)
+                .then(function (res) {
+                    if (res.data.msg === 'ok') {
+                        $scope.update = true;
+                        $timeout(function () {
+                            $scope.update = false;
+                        }, 5000);
+                    }
+                });
         }
 
         $scope.newSermon = function () {
@@ -71,8 +59,27 @@ angular.module('resources').controller('EditResourcesController', ['$scope', 'Au
             $scope.selectedSermonSeries.sermons.splice(i, 1);
         }
 
-        $scope.addSermonSeries = function () {
+        $scope.updatePosition = function (sermon) {
+            Media.update(sermon)
+                .then(function(res){
+                    if (res.data.msg === 'ok') {
+                        $scope.posUpdate = true;
+                        $timeout(function () {
+                            $scope.posUpdate = false;
+                        }, 3000);
+                    }
+                });
+        }
 
+
+        $scope.addSermonSeries = function (name, detail) {
+            Media.create(name, detail)
+                .then(function (res) {
+                    console.log(res.data);
+                    if (res.data.msg === 'ok') {
+                        $scope.sermonseries.push(res.data.data);
+                    }
+                })
         }
 
 

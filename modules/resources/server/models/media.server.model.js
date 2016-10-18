@@ -30,6 +30,14 @@ var MediaSchema = new Schema({
     default: '',
     trim: true
   },
+  position: {
+    type: Number,
+    default: 0
+  },
+  hideSermon: {
+    type: Boolean,
+    default: true
+  },
   book: [],
   sermons: [],
   verses:[],

@@ -9,7 +9,7 @@
   </section>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-6 hover-click" ng-repeat="series in sermonseries| filter:searchText">
+      <div class="col-md-4 col-sm-6 hover-click" ng-repeat="series in sermonseries| orderBy: 'position'">
         <a class="fade-hover" href="/sermonseries/{{series._id}}" ng-click="updateSeries(series)">
           <img-resp imageclass="'fade-hover'" imageurl="'/modules/resources/client/img/' + series.thumbnail"></img-resp>
         </a>

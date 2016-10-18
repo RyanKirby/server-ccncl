@@ -15,15 +15,36 @@
     </div>
     <div class="col-sm-3 col-xs-12">
       <h4>Sermon Series</h4>
-      <ul class="nav nav-pills nav-stacked" ng-repeat="sermon in sermonseries">
-        <li role="presentation" ng-click="selectSermonSeries(sermon, $index)" class="{{sermonSelected[$index]}}"><a
-          href="#">{{sermon.title}}</a></li>
-      </ul>
-      <a href="" ng-click="addSermonSeries()"><span
-        class="fa fa-plus-square-o fa-2x"></span></a>
+      <div class="list-group">
+        <a href="#" class="list-group-item" ng-click="selectSermonSeries(sermon, $index)"
+           ng-repeat="sermon in sermonseries"
+           ng-class="sermon._id === selectedSermonSeries._id ? 'active':''">
+          <h4 class="list-group-item-heading">{{sermon.title}}</h4>
+          <p class="list-group-item-text">
+            Position : <input type="number" ng-model="sermon.position"
+                              ng-blur="updatePosition(sermon)" style="width:50px;color:black"/>
+          </p>
+        </a>
+        <br>
+        <div ng-if="posUpdate" class="alert alert-success">
+          Position updated
+        </div>
+        <button class="btn btn-primary" style="width:100%">
+          Ok
+        </button>
+      </div>
 
+      <h3>Create new media</h3>
+      <p>Sermon Name</p>
+      <input class="form-control input-sm" type="text" ng-model="mediaName"/>
+      <p>Sermon description</p>
+      <input class="form-control input-sm" type="text" ng-model="mediaDescription"/>
+      <br>
+      <button class="btn btn-success" style="width:100%"
+              ng-click="addSermonSeries(mediaName, mediaDescription)">
+        Add Sermon
+      </button>
     </div>
-
 
     <div class="col-sm-9 col-xs-12">
       <form class="row">
@@ -160,8 +181,18 @@
           </div>
         </div>
         <!--/Edit Thumb-->
-        <div class="pull-right">
-          <button class="btn btn-success btn-lg" ng-click="updateSermon()">Save changes</button>
+
+        <div class="col-xs-12">
+          <hr>
+          <div>
+            <button class="btn btn-success btn-lg" ng-click="updateSermon()">Save changes</button>
+          </div>
+          <br>
+        </div>
+
+
+        <div ng-if="update" class="alert alert-success col-xs-12">
+          Sermon series has been successfully updated
         </div>
       </form>
     </div>

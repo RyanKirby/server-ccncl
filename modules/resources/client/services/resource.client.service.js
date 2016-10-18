@@ -11,10 +11,11 @@ angular.module('resources').factory('Media', ['$http',
                 });
             },
             //created a new sermon
-            create: function () {
-                $http.post('/api/media', {})
+            create: function (name, detail) {
+                return $http.post('/createmedia', {title: name, detail: detail})
                     .success(function (res) {
-                        console.log(res)
+                        console.log(res);
+                        return res;
                     })
                     .error(function (res) {
                         console.log('error')
@@ -25,17 +26,19 @@ angular.module('resources').factory('Media', ['$http',
             get: function () {
                 return $http.get('/getsermonseries')
                     .success(function (res) {
+                        console.log(res);
                         return res;
                     })
 
             },
 
-            update: function(sermonSeries){
+            update: function (sermonSeries) {
+                console.log(sermonSeries);
                 return $http.post('/updatesermonseries', sermonSeries)
-                    .success(function(res){
+                    .success(function (res) {
                         return res;
                     })
-                    .error(function(err){
+                    .error(function (err) {
                         return err;
                     })
             }
