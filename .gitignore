@@ -20,8 +20,9 @@ coverage/
 # ======================
 public/dist/
 uploads
-modules/resources/client/img
-modules/resources/client/media
+modules/resources/client/img/
+modules/resources/client/media/
+modules/core/client/img/
 modules/users/client/img/profile/uploads
 config/env/local.js
 *.pem
